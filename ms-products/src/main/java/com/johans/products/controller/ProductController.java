@@ -28,6 +28,11 @@ public class ProductController {
     public ResponseEntity<?> findById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.findById(id));
     }
+
+    @GetMapping("/search-all")
+    public ResponseEntity<?> findAll() {
+        return ResponseEntity.ok(productService.findAll());
+    }    
     
     
     @PostMapping("/create")
